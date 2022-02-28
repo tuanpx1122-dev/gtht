@@ -17,7 +17,7 @@
               <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
                 <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
                   <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
-                  <li class="breadcrumb-item"><a href="#">Danh mục chính</a></li>
+                  <li class="breadcrumb-item"><a href="#">Đồ dùng ingame</a></li>
                   <li class="breadcrumb-item active" aria-current="page"></li>
                 </ol>
               </nav>
@@ -172,109 +172,6 @@
       {% include "includes/footer.html" %}
 
     </div>
-
-        <!-- Page content -->
-    <div class="container-fluid mt--6">
-      <div class="row">
-        <div class="col-xl-12">
-          <div class="card">
-            <div class="card-header border-0">
-              <div class="row align-items-center">
-                <div class="col">
-                  <h3 class="mb-0">Tài khoản</h3>
-                </div>
-              </div>
-            </div>
-            <div class="table-responsive">
-              <!-- Projects table -->
-              <table class="table align-items-center table-flush">
-                <thead class="thead-light">
-                  <tr>
-                    <th scope="col">Loại hàng</th>
-                    <th scope="col">Giá tiền(Xu)</th>
-                    <th scope="col">Giá tiền(Atm)</th>
-                    <th scope="col">Trạng thái</th>
-                    <th scope="col"></th>
-                  </tr>
-                </thead>
-                  {% for obj in doingame %}
-                        <tbody>
-                          <tr>
-                            <th scope="row">
-                              {{ obj.ten }}
-                            </th>
-                            <td>
-                              {{ obj.gia_tien_xu }}k
-                            </td>
-                             <td>
-                              {{ obj.gia_tien_atm }}k
-                             <td>Chưa bán</td>
-                            <td>
-                                <a href="#" onclick="muahang('{{ obj.ten}}', document.getElementById('soluong').value);" class="btn btn-sm btn-primary">Mua</a>
-                            </td>
-                          </tr>
-                        </tbody>
-                  {% endfor %}
-              </table>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      {% include "includes/footer.html" %}
-
-    </div>
-
-    <div class="container-fluid mt--6">
-      <div class="row">
-        <div class="col-xl-12">
-          <div class="card">
-            <div class="card-header border-0">
-              <div class="row align-items-center">
-                <div class="col">
-                  <h3 class="mb-0">Dịch vụ khác</h3>
-                </div>
-              </div>
-            </div>
-            <div class="table-responsive">
-              <!-- Projects table -->
-              <table class="table align-items-center table-flush">
-                <thead class="thead-light">
-                  <tr>
-                    <th scope="col">Loại hàng</th>
-                    <th scope="col">Giá tiền(Xu)</th>
-                    <th scope="col">Giá tiền(Atm)</th>
-                    <th scope="col"></th>
-                  </tr>
-                </thead>
-                  {% for obj in doingame %}
-                        <tbody>
-                          <tr>
-                            <th scope="row">
-                              {{ obj.ten }}
-                            </th>
-                            <td>
-                              {{ obj.gia_tien_xu }}k
-                            </td>
-                             <td>
-                              {{ obj.gia_tien_atm }}k
-                              </td>
-                            <td>
-                                <a href="#" onclick="muahang('{{ obj.ten}}', document.getElementById('soluong').value);" class="btn btn-sm btn-primary">Mua</a>
-                            </td>
-                          </tr>
-                        </tbody>
-                  {% endfor %}
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-      {% include "includes/footer.html" %}
-
-    </div>
-
 {% endblock content %}
 
 <!-- Specific JS goes HERE -->

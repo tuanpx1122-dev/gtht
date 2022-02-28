@@ -30,7 +30,6 @@ def index(request):
         'nguoidungmoi': random.randint(500, 1000),
         'daban': random.randint(500, 1000)
     }
-    print(context['doingame'])
     html_template = loader.get_template('home/index.html')
     return HttpResponse(html_template.render(context, request))
 
@@ -67,6 +66,15 @@ def muahang(request):
     magiaodich = ''
     thongtin = request.POST.get('thongtin')
     soluong = request.POST.get('soluong')
+    if not soluong.isdigit():
+        message_txt = "Số lượng phải là số !!"
+        context = {
+            'magiaodich': magiaodich,
+            'message_txt': message_txt
+        }
+
+        return JsonResponse(context)
+
     if not thongtin or int(soluong) <= 0:
         message_txt = "Bạn chưa chọn thông tin hoặc số lượng !!"
         context = {
