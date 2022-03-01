@@ -17,7 +17,7 @@
               <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
                 <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
                   <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
-                  <li class="breadcrumb-item"><a href="#">Đồ dùng ingame</a></li>
+                  <li class="breadcrumb-item"><a href="#">Hướng dẫn giao dịch</a></li>
                   <li class="breadcrumb-item active" aria-current="page"></li>
                 </ol>
               </nav>
@@ -104,7 +104,7 @@
             <div class="card-header border-0">
               <div class="row align-items-center">
                 <div class="col">
-                  <h3 class="mb-0">Đồ ingame</h3>
+                  <h3 class="mb-0">Hướng dẫn giao dịch</h3>
                 </div>
               </div>
             </div>
@@ -113,34 +113,44 @@
               <table class="table align-items-center table-flush">
                 <thead class="thead-light">
                   <tr>
-                    <th scope="col">Loại hàng</th>
-                    <th scope="col">Giá tiền(Xu)</th>
-                    <th scope="col">Giá tiền(Atm)</th>
-                    <th scope="col">Số lượng (Mua)</th>
                     <th scope="col"></th>
                   </tr>
                 </thead>
-                  {% for obj in doingame %}
-                        <tbody>
-                          <tr>
-                            <th scope="row">
-                              {{ obj.ten }}
-                            </th>
-                            <td>
-                              {{ obj.gia_tien_xu }}k
-                            </td>
-                             <td>
-                              {{ obj.gia_tien_atm }}k
-                              <td inputmode="text"><label>
-                                  <input type=number id="soluong">
-                              </label>
-                              </td>
-                            <td>
-                                <a href="#" onclick="muahang('{{ obj.ten}}', document.getElementById('soluong').value);" class="btn btn-sm btn-primary">Mua</a>
-                            </td>
-                          </tr>
-                        </tbody>
-                  {% endfor %}
+              <td>
+                  <p>
+                    <h3 style="font-size: 36px">Xin cảm ơn bạn đã sử dụng dịch vụ của chúng tôi !</h3><br/>
+                  <br/>
+                    <b style="font-size: 24px"><i>Đối với việc mua đồ bằng xu: </i>
+                        Sau khi mua đồ trên hệ thống thành công, hệ thông sẽ cấp cho bạn một <b style="color: red">mã giao dịch</b> !<br/>
+                        Sau đó tới làng toge 86 ibox mã giao dịch cho nhân vật dichvugtht và tiến hành gửi yêu cầu giao dịch
+                    </b>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <b style="font-size: 24px"><i>Đối với việc mua đồ bằng ATM: </i>
+                        Sau khi mua đồ trên hệ thống thành công, hệ thông sẽ cấp cho bạn một <b style="color: red">mã giao dịch</b> !<br/>
+                      <br/>
+                        Chuyển khoản momo đến sdt: <b style="color: red">0868751549</b> <br>
+                        Chủ tài khoản momo: <b style="color: red">Phạm Xuân Tuấn</b> <br>
+                      <br>
+                        Ngân hàng VCB stk: <b style="color: red">0491000082912 <br/></b>
+                        Chủ tài khoản: <b style="color: red">Phạm Xuân Tuấn <br/></b>
+                        Chi nhánh: <b style="color: red">Thăng Long <br/></b>
+                      <br>
+                        Ngân hàng TPB stk: <b style="color: red"> 01887733401 <br/></b>
+                        Chủ tài khoản: <b style="color: red">Phạm Xuân Tuấn <br/></b>
+                      <br/>
+                        <b style="color: red">Nội dung chuyển khoản là: </b><b style="color: red">mã giao dịch</b> ! <br/>
+                      <br/>
+                        Sau đó tới làng toge 86 ibox mã giao dịch cho nhân vật dichvugtht và tiến hành gửi yêu cầu giao dịch <br/>
+                  </b>
+                  <br/>
+                  <br/>
+                  <p style="font-size: 18px; color: red">Nếu làm mất mã giao dịch hãy ibox cho admin theo link:<br/>
+                      FB: <a href="https://www.facebook.com/profile.php?id=100021653778156">Phạm Xuân Tuấn</a><br/>
+                      Zalo: <a href="https://chat.zalo.me/">0868751549</a>
+                  </p>
+              </td>
               </table>
             </div>
           </div>

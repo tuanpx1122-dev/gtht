@@ -10,7 +10,9 @@ urlpatterns = [
 
     # The home page
     path('', views.index, name='home'),
+    path('dichvu', views.dichvu, name='dichvu'),
     path('mua', views.muahang, name="muahang"),
+    path('huongdan', views.huongdan, name="huongdan"),
 
 
     # Matches any html file

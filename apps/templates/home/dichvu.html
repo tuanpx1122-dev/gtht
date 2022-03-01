@@ -17,7 +17,7 @@
               <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
                 <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
                   <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
-                  <li class="breadcrumb-item"><a href="#">Đồ dùng ingame</a></li>
+                  <li class="breadcrumb-item"><a href="#">Dịch vụ cung cấp</a></li>
                   <li class="breadcrumb-item active" aria-current="page"></li>
                 </ol>
               </nav>
@@ -104,7 +104,7 @@
             <div class="card-header border-0">
               <div class="row align-items-center">
                 <div class="col">
-                  <h3 class="mb-0">Đồ ingame</h3>
+                  <h3 class="mb-0">Dịch vụ Game</h3>
                 </div>
               </div>
             </div>
@@ -113,34 +113,23 @@
               <table class="table align-items-center table-flush">
                 <thead class="thead-light">
                   <tr>
-                    <th scope="col">Loại hàng</th>
-                    <th scope="col">Giá tiền(Xu)</th>
-                    <th scope="col">Giá tiền(Atm)</th>
-                    <th scope="col">Số lượng (Mua)</th>
                     <th scope="col"></th>
                   </tr>
                 </thead>
-                  {% for obj in doingame %}
                         <tbody>
                           <tr>
-                            <th scope="row">
-                              {{ obj.ten }}
-                            </th>
                             <td>
-                              {{ obj.gia_tien_xu }}k
-                            </td>
-                             <td>
-                              {{ obj.gia_tien_atm }}k
-                              <td inputmode="text"><label>
-                                  <input type=number id="soluong">
-                              </label>
-                              </td>
-                            <td>
-                                <a href="#" onclick="muahang('{{ obj.ten}}', document.getElementById('soluong').value);" class="btn btn-sm btn-primary">Mua</a>
+                                <p style="font-size: 36px; color: red">Cảm ơn bạn đã sử dụng dịch vụ của chúng tôi !<br/>
+                                    DỊCH VỤ GTHT : BÁN XU x28, BÁN LƯỢNG x13 làng toge khu 86 server 2
+                                </p><br/><br/>
+                                <p style="font-size: 36px; color: red">Nhập xu thanh lí, đồ thanh lí các loại !<br/>
+                                    Vui lòng điền vào form này: <a href="https://forms.gle/fPahVe7RpXdwBTb29">bán hàng</a><br/>
+                                    <br/>
+                                    Sau đó đến làng toge khu 86 giao dịch !<br/>
+                                </p>
                             </td>
                           </tr>
                         </tbody>
-                  {% endfor %}
               </table>
             </div>
           </div>

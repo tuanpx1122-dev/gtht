@@ -24,13 +24,35 @@ def index(request):
     context = {
         'segment': 'index',
         'doingame': list(query_set.values()),
-        'dichvugame': list(DichVuGame.objects.all()),
-        'taikhoan': list(TaiKhoan.objects.all()),
         'tongtruycap': random.randint(10000, 20000),
         'nguoidungmoi': random.randint(500, 1000),
         'daban': random.randint(500, 1000)
     }
     html_template = loader.get_template('home/index.html')
+    return HttpResponse(html_template.render(context, request))
+
+
+def dichvu(request):
+    query_set = DichVuGame.objects.all()
+    context = {
+        'segment': 'dichvu',
+        'dichvu': list(query_set.values()),
+        'tongtruycap': random.randint(10000, 20000),
+        'nguoidungmoi': random.randint(500, 1000),
+        'daban': random.randint(500, 1000)
+    }
+    html_template = loader.get_template('home/dichvu.html')
+    return HttpResponse(html_template.render(context, request))
+
+
+def huongdan(request):
+    context = {
+        'segment': 'huongdan',
+        'tongtruycap': random.randint(10000, 20000),
+        'nguoidungmoi': random.randint(500, 1000),
+        'daban': random.randint(500, 1000)
+    }
+    html_template = loader.get_template('home/huongdangd.html')
     return HttpResponse(html_template.render(context, request))
 
 

@@ -14,7 +14,7 @@
           <li class="nav-item">
             <a class="nav-link {% if 'index' in segment %} active {% endif %}" href="/">
               <i class="ni ni-tv-2 text-primary"></i>
-              <span class="nav-link-text">Danh mục chính</span>
+              <span class="nav-link-text">Đồ Ingame</span>
             </a>
           </li>
 {#          <li class="nav-item">#}
@@ -24,9 +24,15 @@
 {#            </a>#}
 {#          </li>#}
           <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="ni ni-key-25 text-info"></i>
-              <span class="nav-link-text">Đang phát triển</span>
+            <a class="nav-link {% if 'dichvu' in segment %} active {% endif %}" href="{% url 'dichvu' %}">
+              <i class="ni ni-tv-2 text-primary"></i>
+              <span class="nav-link-text">Dịch vụ</span>
+            </a>
+          </li>
+         <li class="nav-item">
+            <a class="nav-link {% if 'huongdan' in segment %} active {% endif %}" href="{% url 'huongdan' %}">
+              <i class="ni ni-tv-2 text-primary"></i>
+              <span class="nav-link-text">Hướng dẫn giao dịch</span>
             </a>
           </li>
 {#          <li class="nav-item">#}
